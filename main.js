@@ -18,8 +18,8 @@ import Home from './home';
  */
 function reducers(actions, inputs) {
 
-  // The changeReducer takes the intent stream from the Counter and applies the relative value to the count
-  // so the possible values for `val` here are: 1 or -1
+  // The changeReducer takes the intent stream from the Counter and creates a function that applies
+  // the relative value to the count so the possible values for `val` here are: 1 or -1
   const counterChangeReducer$ = inputs.counterChange$.map(val => state => {
     
     // state.update() is an Immutable.js feature
